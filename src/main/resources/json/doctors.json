@@ -1,0 +1,42 @@
+[
+  {
+    "id" : 1 ,
+    "name" : "Grisha" ,
+    "surname" : "Usik",
+    "hospital": {
+    "id" : 2
+    }
+  } ,
+  {
+    "id" : 2 ,
+    "name" : "Volodimir" ,
+    "surname" : "Chaika",
+    "hospital": {
+      "id" : 2
+    }
+  } ,
+  {
+    "id" : 3 ,
+    "name" : "Ilon" ,
+    "surname" : "Mask",
+    "hospital": {
+      "id" : 1
+    }
+  } ,
+  {
+    "id" : 4 ,
+    "name" : "Vitaliy" ,
+    "surname" : "Usov",
+    "hospital": {
+      "id" : 1
+    }
+  } ,
+  {
+    "id" : 5 ,
+    "name" : "Slavik" ,
+    "surname" : "Logvinenko",
+    "hospital":{
+      "id" : 2
+    }
+  }
+]

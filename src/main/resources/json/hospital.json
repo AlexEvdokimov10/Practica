@@ -1,0 +1,10 @@
+[
+  {
+    "id" : 1,
+    "department" : "therapist"
+  },
+  {
+    "id" : 2,
+    "department" : "surgeon"
+  }
+]

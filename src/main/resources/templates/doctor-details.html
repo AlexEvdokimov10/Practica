@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"> </header>
+<div class="container mt-5">
+  <h1>List of doctors</h1>
+  <div th:each="el : ${doctor}" class="alert alert-info mt-2">
+    <h1 th:text="${el.name}"></h1>
+    <h1 th:text="${el.surname}"></h1>
+    <h1 th:text="${el.getHospital().getDepartment()5}"></h1>
+  </div>
+</div>
+<div th:insert="blocks/footer :: footer"> </div>
+</body>
+</html>
