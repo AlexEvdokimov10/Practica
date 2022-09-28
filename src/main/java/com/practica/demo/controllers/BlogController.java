@@ -26,22 +26,6 @@ public class BlogController {
         return "doctors";
     }
 
-    @GetMapping("/doctors/add")
-    public String addDoctorPage(Model model){
-        Iterable<Doctor>doctors=doctorRepository.findAll();
-        model.addAttribute("doctors",doctors);
-        return "doctor-add";
-    }
-
-    @PostMapping("/doctors/add")
-    public String addDoctorPost(@RequestParam String name,@RequestParam String surname, Model model){
-        Doctor doctor=new Doctor();
-        doctor.setName(name);
-        doctor.setSurname(surname);
-        doctorRepository.save(doctor);
-        return "redirect:/doctors";
-    }
-
     @GetMapping("doctors/{id}")
     public String doctorView(@PathVariable (value = "id") long id, Model model){
         Optional<Doctor> doctor=doctorRepository.findById(id);

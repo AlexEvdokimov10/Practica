@@ -1,11 +1,9 @@
 package com.practica.demo.services;
 
 import com.practica.demo.models.Doctor;
-import com.practica.demo.models.Hospital;
 import com.practica.demo.repositories.DoctorRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 @Service
 public class DoctorService {

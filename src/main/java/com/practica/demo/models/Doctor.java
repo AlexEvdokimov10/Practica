@@ -1,23 +1,14 @@
 package com.practica.demo.models;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.sun.istack.NotNull;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
-import org.springframework.data.annotation.Reference;
-import org.springframework.lang.NonNull;
-
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Set;
 
 @Entity
 @Table(name = "doctors")
 public class Doctor implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -25,25 +16,25 @@ public class Doctor implements Serializable {
     private String surname;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "hospital_id", nullable = false)
-    private Hospital hospital;
+    @JoinColumn(name = "department_id", nullable = false)
+    private Department department;
     public Doctor() {
 
     }
 
-    public Doctor(String name, String surname, Hospital hospital){
+    public Doctor(String name, String surname, Department department){
         this.name=name;
         this.surname=surname;
-        this.hospital=hospital;
+        this.department = department;
 
     }
 
-    public Hospital getHospital() {
-        return hospital;
+    public Department getDepartment() {
+        return department;
     }
 
-    public void setHospital(Hospital hospital) {
-        this.hospital = hospital;
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 
 

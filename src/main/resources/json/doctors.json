@@ -3,7 +3,7 @@
     "id" : 1 ,
     "name" : "Grisha" ,
     "surname" : "Usik",
-    "hospital": {
+    "department": {
     "id" : 2
     }
   } ,
@@ -11,7 +11,7 @@
     "id" : 2 ,
     "name" : "Volodimir" ,
     "surname" : "Chaika",
-    "hospital": {
+    "department": {
       "id" : 2
     }
   } ,
@@ -19,7 +19,7 @@
     "id" : 3 ,
     "name" : "Ilon" ,
     "surname" : "Mask",
-    "hospital": {
+    "department": {
       "id" : 1
     }
   } ,
@@ -27,7 +27,7 @@
     "id" : 4 ,
     "name" : "Vitaliy" ,
     "surname" : "Usov",
-    "hospital": {
+    "department": {
       "id" : 1
     }
   } ,
@@ -35,7 +35,7 @@
     "id" : 5 ,
     "name" : "Slavik" ,
     "surname" : "Logvinenko",
-    "hospital":{
+    "department":{
       "id" : 2
     }
   }

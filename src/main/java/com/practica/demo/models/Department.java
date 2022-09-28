@@ -1,29 +1,25 @@
 package com.practica.demo.models;
 
 import javax.persistence.*;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table(name="departments")
-public class Hospital {
+public class Department {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String department;
+    private String name;
 
 
 
-    @OneToMany(mappedBy = "hospital", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "department", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Doctor> doctorSet;
 
-    public Hospital() {
+    public Department() {
     }
 
-    public Hospital(Set<Doctor> doctorSet) {
+    public Department(Set<Doctor> doctorSet) {
         this.doctorSet = doctorSet;
     }
     public Set<Doctor> getDoctorSet() {
@@ -42,11 +38,11 @@ public class Hospital {
         this.id = id;
     }
 
-    public String getDepartment() {
-        return department;
+    public String getName() {
+        return name;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setName(String name) {
+        this.name = name;
     }
 }

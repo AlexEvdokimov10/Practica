@@ -12,7 +12,7 @@
   <div th:each="el : ${doctor}" class="alert alert-info mt-2">
     <h1 th:text="${el.name}"></h1>
     <h1 th:text="${el.surname}"></h1>
-    <h1 th:text="${el.getHospital().getDepartment()5}"></h1>
+    <h1 th:text="${el.getDepartment().getName()}"></h1>
   </div>
 </div>
 <div th:insert="blocks/footer :: footer"> </div>
