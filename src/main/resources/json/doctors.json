@@ -3,6 +3,8 @@
     "id" : 1 ,
     "name" : "Grisha" ,
     "surname" : "Usik",
+    "experience":"trainee",
+    "invitation": "2022-09-28",
     "department": {
     "id" : 2
     }
@@ -11,14 +13,18 @@
     "id" : 2 ,
     "name" : "Volodimir" ,
     "surname" : "Chaika",
+    "experience":"junior",
+    "invitation": "2016-02-10",
     "department": {
       "id" : 2
     }
   } ,
   {
     "id" : 3 ,
-    "name" : "Ilon" ,
-    "surname" : "Mask",
+    "name" : "Valya" ,
+    "surname" : "Gipokrat",
+    "experience":"chief physician",
+    "invitation": "2015-02-10",
     "department": {
       "id" : 1
     }
@@ -27,6 +33,8 @@
     "id" : 4 ,
     "name" : "Vitaliy" ,
     "surname" : "Usov",
+    "experience":"trainee",
+    "invitation": "2022-09-10",
     "department": {
       "id" : 1
     }
@@ -35,6 +43,8 @@
     "id" : 5 ,
     "name" : "Slavik" ,
     "surname" : "Logvinenko",
+    "experience":"middle",
+    "invitation": "2013-01-07",
     "department":{
       "id" : 2
     }

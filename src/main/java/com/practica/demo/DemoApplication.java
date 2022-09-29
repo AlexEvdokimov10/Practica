@@ -29,8 +29,9 @@ public class DemoApplication {
 			try {
 				List<Department> departmentList = Arrays.asList(mapper.readValue(Paths.get("src\\main\\resources\\json\\hospital.json").toFile(), Department[].class));
 				departmentService.save(departmentList);
-				List<Doctor> doctorList = Arrays.stream(mapper.readValue(Paths.get("src\\main\\resources\\json\\doctors.json").toFile(), Doctor[].class)).filter(doctor -> doctor.getDepartment().getId().equals(1L)).collect(Collectors.toList());
+				List<Doctor> doctorList = Arrays.asList(mapper.readValue(Paths.get("src\\main\\resources\\json\\doctors.json").toFile(), Doctor[].class));
 				doctorService.save(doctorList);
+
 
 			} catch (IOException e){
 				System.out.println("Unable to save users: " + e.getMessage());

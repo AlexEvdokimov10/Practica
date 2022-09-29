@@ -3,6 +3,7 @@ package com.practica.demo.models;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name = "doctors")
@@ -15,6 +16,10 @@ public class Doctor implements Serializable {
 
     private String surname;
 
+    private String experience;
+
+    private Date invitation;
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "department_id", nullable = false)
     private Department department;
@@ -22,10 +27,12 @@ public class Doctor implements Serializable {
 
     }
 
-    public Doctor(String name, String surname, Department department){
+    public Doctor(String name, String surname,String experience,Date invitation, Department department){
         this.name=name;
         this.surname=surname;
+        this.invitation=invitation;
         this.department = department;
+        this.experience=experience;
 
     }
 
@@ -37,6 +44,20 @@ public class Doctor implements Serializable {
         this.department = department;
     }
 
+    public Date getInvitation() {
+        return invitation;
+    }
+    public String getExperience() {
+        return experience;
+    }
+
+    public void setExperience(String experience) {
+        this.experience = experience;
+    }
+
+    public void setInvitation(Date invitation) {
+        this.invitation = invitation;
+    }
 
     public Long getId() {
         return id;
