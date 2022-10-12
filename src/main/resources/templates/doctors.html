@@ -8,13 +8,12 @@
 <body>
 <header th:insert="blocks/header :: header"> </header>
 <div class="container mt-5">
-  <h1>Business card </h1>
+  <h1> Doctors </h1>
   <div th:each="el : ${doctors}" class="alert alert-info mt-2">
     <h1 th:text="${el.name}"></h1>
     <h1 th:text="${el.surname}"></h1>
     <a th:href="'/doctors/'+${el.id}" class="btn btn-warning">Details</a>
   </div>
 </div>
-<div th:insert="blocks/footer :: footer"> </div>
 </body>
 </html>

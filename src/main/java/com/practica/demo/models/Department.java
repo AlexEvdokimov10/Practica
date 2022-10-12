@@ -11,8 +11,6 @@ public class Department {
 
     private String name;
 
-
-
     @OneToMany(mappedBy = "department", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<Doctor> doctorSet;
 

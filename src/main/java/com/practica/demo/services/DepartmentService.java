@@ -1,11 +1,15 @@
 package com.practica.demo.services;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.practica.demo.models.Department;
 import com.practica.demo.repositories.DepartmentRepository;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class DepartmentService {
@@ -14,21 +18,13 @@ public class DepartmentService {
     public DepartmentService(DepartmentRepository departmentRepository) {
         this.departmentRepository = departmentRepository;
     }
-
-    public Iterable<Department> list() {
-        return departmentRepository.findAll();
+    public List<Department> readFileHospitalJson() throws IOException {
+        return Arrays.asList(new ObjectMapper()
+                .readValue(Paths.get("src\\main\\resources\\json\\hospital.json")
+                        .toFile(), Department[].class));
     }
-
-    public Department save(Department department) {
-        return departmentRepository.save(department);
-    }
-
     public void save(List<Department> departmentList) {
         departmentRepository.saveAll(departmentList);
     }
 
-    public Optional<Department> findById(Long id) {
-
-        return departmentRepository.findById(id);
-    }
 }
