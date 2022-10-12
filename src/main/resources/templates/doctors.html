@@ -12,7 +12,8 @@
   <div th:each="el : ${doctors}" class="alert alert-info mt-2">
     <h1 th:text="${el.name}"></h1>
     <h1 th:text="${el.surname}"></h1>
-    <a th:href="'/doctors/'+${el.id}" class="btn btn-warning">Details</a>
+    <h1 th:text="${el.experience}"></h1>
+    <h1 th:text="${el.invitation}"></h1>
   </div>
 </div>
 </body>
